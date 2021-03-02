@@ -1,16 +1,3 @@
-From empty project
+1. `apt-get-project` PHP installation using apt-get
 
-1. install Composer 
-```
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-```
-2. `php composer.phar`
-
-Current project
-
-1. `php -S localhost:8000 server.php` for starting server
-2. `php composer.phar install` - installs dependencies into folder `vendor\`
-3. 
+2. `composer-project` PHP run using Library Manager - `composer`.

@@ -12,4 +12,5 @@ php -r "unlink('composer-setup.php');"
 Current project
 
 1. `php -S localhost:8000 server.php` for starting server
-2. 
+2. `php composer.phar install` - installs dependencies into folder `vendor\`
+3. 

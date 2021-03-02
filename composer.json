@@ -1,5 +1,7 @@
 {
   "require": {
-      "monolog/monolog": "1.0.*"
+    "symfony/process": "^3.3",
+    "phpunit/phpunit": "^6.4",
+    "guzzlehttp/guzzle": "^6.3"
   }
 }

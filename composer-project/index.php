@@ -1,8 +1,12 @@
 <?php
 // server.php
-if (preg_match('/\.(?:png|jpg|jpeg|gif)$/', $_SERVER["REQUEST_URI"])) {
-    return false;    // serve the requested resource as-is.
-} else { 
-    echo "<p>Welcome to PHP</p>";
+
+echo $_SERVER["REQUEST_URI"];
+
+if (preg_match(('/\/testpage/'), $_SERVER["REQUEST_URI"])) {
+    echo "<p>Hello</p>";
+} else {
+    header("HTTP/1.0 404 Not Found");
 }
+
 ?>

@@ -1,5 +1,7 @@
 Current project
 
+PHP 8 is used to repeat the case with dockerfile.
+
 Inspired by https://github.com/peterlafferty/phpunitinbuiltweb
 
 1. install Composer 
@@ -13,3 +15,10 @@ php -r "unlink('composer-setup.php');"
 3. `php -S localhost:8000` for starting server
 4. `php composer.phar install` - installs dependencies into folder `vendor\`
 5. `vendor/bin/phpunit IntegrationTests.php`
+
+If you have issues with composer 
+1. `sudo apt-get install php8.0-xml` - install extention for PHP 
+2. `sudo apt-get install php8.0-mbstring`
+
+
+**Warning:** Test `test200` is failing.

@@ -4,12 +4,12 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\Process\Process;
 use GuzzleHttp\Client;
 
-class IntegrationTest extends TestCase
+class IntegrationTests extends TestCase
 {
     /** @var Process */
     private static $process;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass() : void
     {
         self::$process = new Process("php -S localhost:8080 -t .");
         self::$process->start();
@@ -17,7 +17,7 @@ class IntegrationTest extends TestCase
         usleep(100000); //wait for server to get going
     }
 
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass() : void
     {
         self::$process->stop();
     }
@@ -26,7 +26,7 @@ class IntegrationTest extends TestCase
     {
         $client = new Client(['http_errors' => false]);
 
-        $response = $client->request("GET", "http://localhost:8080");
+        $response = $client->request("GET", "http://localhost:8080/");
         $this->assertEquals(404, $response->getStatusCode());
     }
 

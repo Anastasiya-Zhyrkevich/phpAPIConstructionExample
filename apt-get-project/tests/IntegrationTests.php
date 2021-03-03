@@ -12,8 +12,6 @@ class IntegrationTests extends TestCase
 
     public static function setUpBeforeClass() : void
     {
-        $client = new Client(['http_errors' => false]);
-        
         self::$process = new Process("php -S localhost:8080 -t .");
         self::$process->start();
 
